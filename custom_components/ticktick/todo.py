@@ -118,7 +118,7 @@ class TickTickTodoListEntity(CoordinatorEntity[TickTickCoordinator], TodoListEnt
                     continue
 
                 for task in project_with_tasks.tasks:
-                    tasks_to_add.append(  # noqa: PERF401
+                    tasks_to_add.insert(0,  # noqa: PERF401
                         TodoItem(
                             uid=task.id,
                             summary=task.title,
